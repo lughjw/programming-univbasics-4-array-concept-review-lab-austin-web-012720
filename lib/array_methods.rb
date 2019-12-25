@@ -1,5 +1,7 @@
 def find_element_index(array, value_to_find)
   # Add your solution here
+  # array.find_index(value_to_find)
+  
   array.size.times do |index|
     if(array[index] == value_to_find)
       return index
@@ -16,9 +18,9 @@ def find_max_value(array)
   max = array[0]
   
   array.size.times { |index|
-    if(max < array[index])
+    if(max < array[index]) {
       max = array[index]
-    end
+    }
   }
   
   max
@@ -29,6 +31,9 @@ def find_min_value(array)
   # array.min
   
   min = array[0]
-  0..array.length { |index|
-    if min < array[index]
+  count = 0
+  while 0 < array.size
+    if min > array[index]
+      min = array[index]
+    end
 end
